@@ -9,6 +9,8 @@ body {
 }
 
 .canvas-cntr {
+  width: 800px;
+  height: 600px;
   background-image: url(../earth-3.jpg);
-  background-size: cover; 
+  background-size: cover;
 }
