@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.canvas-cntr {
+  background-image: url(../earth-3.jpg);
+  background-size: cover; 
+}
