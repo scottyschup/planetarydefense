@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  overflow: hidden;
 }
 
 .clearfix:after {
@@ -11,6 +12,8 @@ body {
 .canvas-cntr {
   width: 800px;
   height: 600px;
-  background-image: url(../earth-3.jpg);
+  margin: 50px auto;
+  border: 3px solid #333;
+  background-image: url(../imgs/earth-3.jpg);
   background-size: cover;
 }
