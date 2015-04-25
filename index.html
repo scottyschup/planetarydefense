@@ -8,8 +8,50 @@
     <title>Aspiring Meteorites</title>
   </head>
   <body>
-    <h1>Aspiring Meteorites</h1>
-    <p>The Goa'uld have sent a storm of asteroids barreling toward earth in an attempt to decimate the Tauri once and for all. Atlantis, fending off its own Raith attack, could only send a single PuddleJumper to save the day. You must blast the asteroids out of the sky before they can enter the atmosphere and wreak havoc on earth below.</p>
+    <header>
+      <h1>Aspiring Meteorites</h1>
+      <p>The Goa'uld have sent a storm of asteroids barreling toward earth in an attempt to decimate the Tauri once and for all. Atlantis, fending off its own Raith attack, could only send a single PuddleJumper to save the day. You must blast the asteroids out of the sky before they can enter the atmosphere and wreak havoc on earth below.</p>
+    </header>
+    <ul class="clearfix controls">
+      <li>
+        <div>&#8592;</div>
+        <div>rotate counter-clockwise</div>
+      </li>
+      <li>
+        <div>&#8594;</div>
+        <div>rotate clockwise</div>
+      </li>
+      <li>
+        <div>&#8593;</div>
+        <div>propel ship forward</div>
+      </li>
+      <li>
+        <div>&#8595;</div>
+        <div>propel ship backward</div>
+      </li>
+      <li>
+        <div>Space</div>
+        <div>fire drone</div>
+      </li>
+      <li>
+        <div>Shift</div>
+        <div>activate shield</div>
+      </li>
+    </ul>
+    <div class="clearfix scores">
+      <div>
+        <div>Earth Deathtoll</div>
+        <div id=deathtoll></div>
+      </div>
+      <div>
+        <div>Drones Left</div>
+        <div id=drones></div>
+      </div>
+      <div>
+        <div>Shield Power</div>
+        <div id=shield></div>
+      </div>
+    </div>
     <div class="canvas-cntr clearfix">
       <canvas id="game-canvas" width=700 height=500>
       </canvas>

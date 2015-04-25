@@ -19,11 +19,48 @@ body {
   background-size: cover;
 }
 
-h1, p {
+canvas {
+  position: absolute;
+}
+
+header {
  width: 700px;
  margin: 5px auto;
 }
 
 h1 {
   width: 350px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul * {
+  float: left;
+  margin: 0 5px;
+}
+
+ul > li {
+  clear: both;
+}
+
+li > div:first-child {
+  display: block;
+  width: 50px;
+  text-align: right;
+}
+
+li > div:last-child {
+  color: #99b;
+}
+
+.scores {
+  float: left;
+  margin-left: 10px;
+}
+
+.controls {
+  float: right;
+  margin-right: 10px;
 }
