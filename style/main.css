@@ -57,10 +57,25 @@ li > div:last-child {
 
 .scores {
   float: left;
-  margin-left: 10px;
+  margin-left: 50px;
+}
+
+.scores > div {
+  margin: 20px auto;
 }
 
 .controls {
   float: right;
   margin-right: 10px;
+}
+
+#drones {
+  max-width: 200px;
+  height: 100px;
+}
+
+#drones > img {
+  float: left;
+  height: 20px;
+  width: 40px;
 }
