@@ -48,6 +48,10 @@
       </ul>
       <div class="clearfix scores">
         <div>
+          <div>Asteroids En Route</div>
+          <div id=asteroids-coming></div>
+        </div>
+        <div>
           <div>Earth Deathtoll</div>
           <div id=deathtoll></div>
         </div>
@@ -76,24 +80,38 @@
         <p>Difficulty</p>
         <label>
         <input type=radio name=difficulty value=5>
-        Dr. Radek Zelenka mode (easy)</label>
+        Dr. Radek Zelenka mode (easy)
+        </label>
         <label>
         <input type=radio name=difficulty value=7>
-        Dr. Rodney McKay mode (normal)</label>
+        Dr. Rodney McKay mode (normal)
+        </label>
         <label>
         <input type=radio name=difficulty value=9>
-        Lt. Col. John Sheppard mode (hard)</label>
+        Lt. Col. John Sheppard mode (hard)
+        </label>
+        <label>
+        <input type=radio name=difficulty value=11>
+        Teal'c mode (hardest)
+        </label>
 
         <p>Stamina (Game Length)</p>
         <label>
-        <input type=radio name=stamina value=30>
-        Dr. Jennifer Keller mode (short)</label>
+        <input type=radio name=stamina value=25>
+        Dr. Jennifer Keller mode (short)
+        </label>
         <label>
         <input type=radio name=stamina value=50>
-        Dr. Elizabeth Weir mode (normal)</label>
+        Dr. Elizabeth Weir mode (normal)
+        </label>
         <label>
         <input type=radio name=stamina value=100>
-        Teyla Emmagen mode (long)</label>
+        Teyla Emmagan mode (long)
+        </label>
+        <label>
+        <input type=radio name=stamina value=200>
+        Bra'tac mode (longest)
+        </label>
 
         <button class=start-game>Start new game!</button>
       </section>
@@ -114,7 +132,7 @@
     <script src="lib/keyMonkey.js"></script>
 
     <script>
-      var canvas = document.getElementById("game-canvas");
+      var canvas = $("#game-canvas")[0];
       var ctx = canvas.getContext("2d");
       var game = new Asteroids.Game();
       var gameView = new Asteroids.GameView(game, ctx);

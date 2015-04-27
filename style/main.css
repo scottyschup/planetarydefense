@@ -5,7 +5,7 @@ body {
 }
 
 body * {
-  transition: top 3s, opacity 0.5s;
+  transition: top 2s, opacity 0.5s;
 }
 
 .clearfix:after {
@@ -21,7 +21,6 @@ body * {
   border: 3px solid #333;
   background-image: url(../imgs/earth-3.jpg);
   background-size: cover;
-  /* transition: top 3s; */
 }
 
 canvas {
@@ -32,7 +31,6 @@ header {
   margin: 25px auto;
   position: relative;
   top: 700px;
-  /* transition: top 3s; */
   width: 100%;
 
 }
@@ -78,10 +76,15 @@ li > div:last-child {
   /* transition: opacity 0.5s; */
 }
 
-.intro > button {
+button {
   background-color: #bbb;
+  border: 2px solid #999;
+  border-radius: 5px;
   color: #222;
   display: block;
+  font-size: larger;
+  font-weight: 700;
+  height: 45px;
   margin: 10px auto;
   opacity: 0;
   width: 200px;
@@ -159,4 +162,8 @@ li > div:last-child {
   display: block;
   position: relative;
   left: 20px;
+}
+
+.new-game > button {
+  opacity: 1;
 }
