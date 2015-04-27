@@ -4,6 +4,10 @@ body {
   color: #ccc;
 }
 
+body * {
+  transition: top 3s, opacity 0.5s;
+}
+
 .clearfix:after {
   content: '';
   display: block;
@@ -17,7 +21,7 @@ body {
   border: 3px solid #333;
   background-image: url(../imgs/earth-3.jpg);
   background-size: cover;
-  transition: top 3s;
+  /* transition: top 3s; */
 }
 
 canvas {
@@ -25,20 +29,12 @@ canvas {
 }
 
 header {
-  margin: 5px auto;
+  margin: 25px auto;
   position: relative;
   top: 700px;
-  transition: top 3s;
-  width: 700px;
+  /* transition: top 3s; */
+  width: 100%;
 
-}
-
-button {
-  background-color: #bbb;
-  color: #222;
-  display: block;
-  margin: 10px auto;
-  width: 200px;
 }
 
 h1 {
@@ -79,11 +75,23 @@ li > div:last-child {
 
 .intro * {
   text-align: center;
+  /* transition: opacity 0.5s; */
+}
+
+.intro > button {
+  background-color: #bbb;
+  color: #222;
+  display: block;
+  margin: 10px auto;
+  opacity: 0;
+  width: 200px;
 }
 
 .intro p {
   font-size: 24px;
-  margin-top: 30px;
+  margin: 20px auto;
+  opacity: 0;
+  width: 500px;
 }
 
 .game-board {
@@ -126,4 +134,29 @@ li > div:last-child {
 #shield {
   color: seagreen;
   font-weight: 700;
+}
+
+.end-game {
+  display: none;
+  left: calc(50% - 250px);
+  position: absolute;
+  top: 20%;
+  width: 500px;
+}
+
+.end-game > section {
+  background-color: rgba(125, 150, 175, 0.6);
+  border: 3px solid #222;
+  border-radius: 7px;
+  margin: 10px;
+}
+
+.end-game > section > * {
+  margin: 10px;
+}
+
+.new-game > label {
+  display: block;
+  position: relative;
+  left: 20px;
 }
