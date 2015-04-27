@@ -17,6 +17,7 @@ body {
   border: 3px solid #333;
   background-image: url(../imgs/earth-3.jpg);
   background-size: cover;
+  transition: top 3s;
 }
 
 canvas {
@@ -24,12 +25,29 @@ canvas {
 }
 
 header {
- width: 700px;
- margin: 5px auto;
+  margin: 5px auto;
+  position: relative;
+  top: 700px;
+  transition: top 3s;
+  width: 700px;
+
+}
+
+button {
+  background-color: #bbb;
+  color: #222;
+  display: block;
+  margin: 10px auto;
+  width: 200px;
 }
 
 h1 {
-  width: 350px;
+  display: block;
+  font-size: 48px;
+  margin: 10px auto;
+  position: relative;
+  width: 620px;
+  z-index: 10;
 }
 
 ul {
@@ -55,9 +73,29 @@ li > div:last-child {
   color: #99b;
 }
 
+.intro {
+  transition: opacity 1.5s;
+}
+
+.intro * {
+  text-align: center;
+}
+
+.intro p {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.game-board {
+  position: relative;
+  top: -1000px;
+  transition: top 2s, opacity 1s;
+}
+
 .scores {
   float: left;
   margin-left: 50px;
+  font-size: 24px;
 }
 
 .scores > div {
@@ -78,4 +116,14 @@ li > div:last-child {
   float: left;
   height: 20px;
   width: 40px;
+}
+
+#deathtoll {
+  color: #d00;
+  font-weight: 700;
+}
+
+#shield {
+  color: seagreen;
+  font-weight: 700;
 }
