@@ -4,7 +4,7 @@ body {
   overflow: hidden;
   color: #ccc;
   left: 0;
-  padding-top: 600px;
+  padding-top: 1200px;
   position: absolute;
   right: 0;
   top: 0;
@@ -201,7 +201,7 @@ canvas {
 }
 
 .end-game, .new-game {
-  background-color: rgba(125, 150, 175, 0.6);
+  background-color: rgba(125, 150, 175, 0.7);
   border: 3px solid #222;
   border-radius: 7px;
   left: calc(50% - 335px);
@@ -219,6 +219,8 @@ canvas {
 .new-game {
   font-size: 18px;
   bottom: -100%;
+  padding-bottom: 30px;
+  margin-bottom: -10px;
 }
 
 .new-game > * {
@@ -252,7 +254,12 @@ canvas {
   width: 96%;
 }
 
-.options > button.selected {
+.options > button:hover {
+  background-color: #fff;
+  transition: background-color 0.5s;
+}
+
+button.selected {
   background-color: #ccc;
   color: #333;
 }
