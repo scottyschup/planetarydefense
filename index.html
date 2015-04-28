@@ -15,7 +15,10 @@
         <p>The Goa'uld have sent a storm of asteroids hurtling toward Earth in an attempt to obliterate its inhabitants once and for all.</p>
         <p>Atlantis, fending off its own Wraith attack, could only spare a single PuddleJumper to counter the Goa'uld assault.</p>
         <p>You must blast the asteroids out of the sky before they can enter the atmosphere and wreak havoc on earth below.</p>
-        <button class=start>I'm ready!</button>
+        <div class=start-options>
+          <button class=start>I'm ready!</button>
+          <a class=game-options href="javascript:void(0);">Game Options</a>
+        </div>
       </div>
     </header>
 
@@ -48,7 +51,7 @@
       </ul>
       <div class="clearfix scores">
         <div>
-          <div>Asteroids En Route</div>
+          <div>Asteroids<br>Approaching</div>
           <div id=asteroids-coming></div>
         </div>
         <div>
@@ -71,52 +74,45 @@
     </section>
 
     <section class=end-game>
-      <section class=message>
-        <h2 class=end-message-title></h2>
-        <p class=end-message></p>
-      </section>
-
-      <section class=new-game>
-        <p>Difficulty</p>
-        <label>
-        <input type=radio name=difficulty value=5>
-        Dr. Radek Zelenka mode (easy)
-        </label>
-        <label>
-        <input type=radio name=difficulty value=7>
-        Dr. Rodney McKay mode (normal)
-        </label>
-        <label>
-        <input type=radio name=difficulty value=9>
-        Lt. Col. John Sheppard mode (hard)
-        </label>
-        <label>
-        <input type=radio name=difficulty value=11>
-        Teal'c mode (hardest)
-        </label>
-
-        <p>Stamina (Game Length)</p>
-        <label>
-        <input type=radio name=stamina value=25>
-        Dr. Jennifer Keller mode (short)
-        </label>
-        <label>
-        <input type=radio name=stamina value=50>
-        Dr. Elizabeth Weir mode (normal)
-        </label>
-        <label>
-        <input type=radio name=stamina value=100>
-        Teyla Emmagan mode (long)
-        </label>
-        <label>
-        <input type=radio name=stamina value=200>
-        Bra'tac mode (longest)
-        </label>
-
-        <button class=start-new-game>Start new game!</button>
-      </section>
+      <h2 class=end-message-title></h2>
+      <p class=end-message></p>
     </section>
 
+    <section class="new-game clearfix">
+      <button class=start-new-game>Start new game</button>
+      <section class=options>
+        <h3>Difficulty (game speed)</h3>
+        <button class=difficulty value=5>
+          <ul><li>Dr. Radek Zelenka</li><li>(easy)</li></ul>
+        </button>
+        <button class=difficulty value=7>
+          <ul><li>Dr. Rodney McKay</li><li>(normal)</li></ul>
+        </button>
+        <button class=difficulty value=9>
+          <ul><li>Lt. Col. John Sheppard</li><li>(hard)</li></ul>
+        </button>
+        <button class=difficulty value=11>
+          <ul><li>Teal'c</li><li>(hardest)</li></ul>
+        </button>
+      </section>
+
+      <section class=options>
+        <h3>Stamina (game length)</h3>
+        <button class=stamina value=30>
+          <ul><li>Dr. Jennifer Keller mode</li><li>(short)</li></ul>
+        </button>
+        <button class=stamina value=75>
+          <ul><li>Dr. Elizabeth Weir mode</li><li>(normal)</li></ul>
+        </button>
+        <button class=stamina value=150>
+          <ul><li>Teyla Emmagan mode</li><li>(long)</li></ul>
+        </button>
+        <button class=stamina value=250>
+          <ul><li>Bra'tac mode</li><li>(longest)</li></ul>
+        </button>
+      </section>
+
+    </section>
 
     <script src="lib/utils.js"></script>
     <script src="lib/movingObject.js"></script>
@@ -135,10 +131,15 @@
       var ctx = canvas.getContext("2d");
       var gameView = new Asteroids.GameView(ctx);
       gameView.intro();
-
-      $(".start-new-game").one("click", function () {
-        gameView.newGameOpts();
-      });
     </script>
+    <div class=preload>
+      <img src="imgs/puddlejumper/base.png">
+      <img src="imgs/puddlejumper/accel.png">
+      <img src="imgs/puddlejumper/decel.png">
+      <img src="imgs/puddlejumper/drone.png">
+      <img src="imgs/puddlejumper/left.png">
+      <img src="imgs/puddlejumper/right.png">
+      <img src="imgs/earth-3.jpg">
+    </div>
   </body>
 </html>

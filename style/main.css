@@ -1,11 +1,42 @@
 body {
-  background-color: black;
+  background-color: #000;
   overflow: hidden;
   color: #ccc;
 }
 
+body::after {
+  background-image: url(../imgs/milkyway.jpg);
+  /* background-position: center center; */
+  background-size: cover;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 1s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+
+.preload > img {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+}
+
 body * {
-  transition: top 2s, opacity 0.5s;
+  transition: top 1s, bottom 1s, opacity 0.5s;
 }
 
 .clearfix:after {
@@ -86,8 +117,18 @@ button {
   font-weight: 700;
   height: 45px;
   margin: 10px auto;
-  opacity: 0;
+  position: relative;
   width: 200px;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+.start-options {
+  opacity: 0;
+  transition: 2s;
 }
 
 .intro p {
@@ -99,7 +140,7 @@ button {
 
 .game-board {
   position: relative;
-  top: -1000px;
+  top: -2000px;
   transition: top 2s, opacity 1s;
 }
 
@@ -139,30 +180,85 @@ button {
   font-weight: 700;
 }
 
-.end-game {
-  left: calc(50% - 250px);
-  position: absolute;
-  top: -200%;
-  width: 500px;
-}
-
-.end-game > section {
+.end-game, .new-game {
   background-color: rgba(125, 150, 175, 0.6);
   border: 3px solid #222;
   border-radius: 7px;
+  left: calc(50% - 335px);
   margin: 10px;
+  position: absolute;
+  text-align: center;
+  width: 650px;
 }
 
-.end-game > section > * {
-  margin: 10px;
+.end-game {
+  font-size: 24px;
+  top: -100%;
 }
 
-.new-game > label {
-  display: block;
-  position: relative;
-  left: 20px;
+.new-game {
+  font-size: 18px;
+  bottom: -100%;
 }
 
-.new-game > button {
+.new-game > * {
+  margin: 7px auto;
+}
+
+.new-game h3 {
+  font-weight: 700;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.new-game button {
+  margin: 20px auto 10px;
   opacity: 1;
+  width: 80%;
+}
+
+.options {
+  width: 50%;
+  float: left;
+}
+
+.options > button {
+  background-color: #333;
+  color: #ccc;
+  float: left;
+  font-size: 14px;
+  height: 25px;
+  margin: 2px 2%;
+  width: 96%;
+}
+
+.options > button.selected {
+  background-color: #ccc;
+  color: #333;
+}
+
+button > ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+}
+
+button > ul > li {
+  display: block;
+  font-size: 16px;
+  float: left;
+  clear: none;
+  margin: 0 5px 0 20px;;
+  padding: 0;
+}
+
+button > ul > li:first-child {
+  text-align: left;
+  width: 60%;
+}
+
+button > ul > li:nth-child(2) {
+  text-align: left;
+  width: 20%;
 }
