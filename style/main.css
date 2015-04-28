@@ -50,7 +50,7 @@ a:hover {
 }
 
 body * {
-  transition: top 1s, bottom 1s, opacity 0.5s;
+  transition: top 1s, bottom 1s, opacity 1.5s;
 }
 
 .clearfix:after {
@@ -102,8 +102,11 @@ li > div:last-child {
   color: #99b;
 }
 
-.intro {
-  transition: opacity 1.5s;
+div.intro > p {
+  font-size: 24px;
+  margin: 20px auto;
+  opacity: 0;
+  width: 500px;
 }
 
 .intro * {
@@ -132,13 +135,6 @@ button:hover {
 .start-options {
   opacity: 0;
   transition: 2s;
-}
-
-.intro p {
-  font-size: 24px;
-  margin: 20px auto;
-  opacity: 0;
-  width: 500px;
 }
 
 .game-board {
