@@ -1,20 +1,34 @@
 body {
   background-color: #000;
+  bottom: 0;
   overflow: hidden;
   color: #ccc;
+  left: 0;
+  padding-top: 600px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: top 2.5s;
+/*   width: 100%;
+height: 100%; */
 }
 
-body::after {
-  background-image: url(../imgs/milkyway.jpg);
-  /* background-position: center center; */
+.body {
+  background-image: url(../imgs/milkyway2.jpg);
   background-size: cover;
-  content: "";
+/*   width: 100%;
+height: 100%; */
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  opacity: 1;
   position: absolute;
   z-index: -1;
+}
+
+h1, h2, h3 {
+  margin: 0;
 }
 
 a {
@@ -45,25 +59,15 @@ body * {
   clear: both;
 }
 
-.canvas-cntr {
-  width: 700px;
-  height: 500px;
-  margin: 10px auto;
-  border: 3px solid #333;
-  background-image: url(../imgs/earth-3.jpg);
-  background-size: cover;
-}
-
-canvas {
-  position: absolute;
-}
-
 header {
   margin: 25px auto;
   position: relative;
-  top: 700px;
+  top: 0;
   width: 100%;
+}
 
+header > * {
+  text-shadow: #000 0 0 20px;
 }
 
 h1 {
@@ -104,7 +108,6 @@ li > div:last-child {
 
 .intro * {
   text-align: center;
-  /* transition: opacity 0.5s; */
 }
 
 button {
@@ -139,24 +142,41 @@ button:hover {
 }
 
 .game-board {
-  position: relative;
-  top: -2000px;
+  position: fixed;
+  top: -700px;
   transition: top 2s, opacity 1s;
+  width: 100%;
+}
+
+.canvas-cntr {
+}
+
+canvas {
+  background-image: url(../imgs/earth-3.jpg);
+  background-size: cover;
+  border: 3px solid #333;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0;
+  position: fixed;
+  left: calc(50% - 350px);
+  width: 700px;
 }
 
 .scores {
-  float: left;
-  margin-left: 50px;
+  position: absolute;
+  left: 40px;
+  margin-right: 5%;
   font-size: 24px;
 }
 
 .scores > div {
-  margin: 20px auto;
+  margin: 0 auto 20px;
 }
 
 .controls {
-  float: right;
-  margin-right: 10px;
+  position: absolute;
+  right: 10px;
 }
 
 #drones {
@@ -186,7 +206,7 @@ button:hover {
   border-radius: 7px;
   left: calc(50% - 335px);
   margin: 10px;
-  position: absolute;
+  position: fixed;
   text-align: center;
   width: 650px;
 }
