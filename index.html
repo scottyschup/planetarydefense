@@ -113,7 +113,7 @@
         Bra'tac mode (longest)
         </label>
 
-        <button class=start-game>Start new game!</button>
+        <button class=start-new-game>Start new game!</button>
       </section>
     </section>
 
@@ -123,7 +123,6 @@
     <script src="lib/powerUp.js"></script>
     <script src="lib/stargate.js"></script>
     <script src="lib/zpm.js"></script>
-    <!-- <script src="lib/target.js"></script> -->
     <script src="lib/asteroid.js"></script>
     <script src="lib/drone.js"></script>
     <script src="lib/ship.js"></script>
@@ -134,9 +133,12 @@
     <script>
       var canvas = $("#game-canvas")[0];
       var ctx = canvas.getContext("2d");
-      var game = new Asteroids.Game();
-      var gameView = new Asteroids.GameView(game, ctx);
-      gameView.start();
+      var gameView = new Asteroids.GameView(ctx);
+      gameView.intro();
+
+      $(".start-new-game").one("click", function () {
+        gameView.newGameOpts();
+      });
     </script>
   </body>
 </html>

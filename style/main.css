@@ -140,10 +140,9 @@ button {
 }
 
 .end-game {
-  display: none;
   left: calc(50% - 250px);
   position: absolute;
-  top: 20%;
+  top: -200%;
   width: 500px;
 }
 
