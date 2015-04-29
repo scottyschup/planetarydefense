@@ -4,13 +4,15 @@ body {
   overflow: hidden;
   color: #ccc;
   left: 0;
-  padding-top: 1200px;
+  padding-top: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transition: top 2.5s;
-/*   width: 100%;
-height: 100%; */
+}
+
+body * {
+  transition: top, bottom, opacity, background-color, box-shadow;
+  transition-duration: 1s, 1s, 1.5s, .5s, .5s;
 }
 
 .body {
@@ -18,12 +20,13 @@ height: 100%; */
   background-size: cover;
 /*   width: 100%;
 height: 100%; */
-  top: 0;
+  top: -500px;
   left: 0;
   bottom: 0;
   right: 0;
   opacity: 1;
   position: absolute;
+  transition: opacity 2s, transform 20s ease-out;
   z-index: -1;
 }
 
@@ -41,16 +44,11 @@ a:hover {
   color: #fff;
 }
 
-
 .preload > img {
   position: absolute;
   overflow: hidden;
   left: -9999px;
   top: -9999px;
-}
-
-body * {
-  transition: top 1s, bottom 1s, opacity 1.5s;
 }
 
 .clearfix:after {
@@ -61,21 +59,33 @@ body * {
 
 header {
   margin: 25px auto;
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 2000px;
   width: 100%;
+  transition: transform 3s ease;
 }
 
 header > * {
   text-shadow: #000 0 0 20px;
 }
 
+footer {
+  bottom: 10px;
+  font-size: 12px;
+  left: calc(50% - 50px);
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+}
+
 h1 {
   display: block;
+  font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 48px;
-  margin: 10px auto;
+  font-weight: 700;
+  text-align: center;
   position: relative;
-  width: 620px;
   z-index: 10;
 }
 
@@ -102,17 +112,6 @@ li > div:last-child {
   color: #99b;
 }
 
-div.intro > p {
-  font-size: 24px;
-  margin: 20px auto;
-  opacity: 0;
-  width: 500px;
-}
-
-.intro * {
-  text-align: center;
-}
-
 button {
   background-color: #bbb;
   border: 2px solid #999;
@@ -132,6 +131,17 @@ button:hover {
   background-color: #fff;
 }
 
+div.intro > p {
+  font-size: 24px;
+  margin: 20px auto;
+  opacity: 0;
+  width: 500px;
+}
+
+.intro * {
+  text-align: center;
+}
+
 .start-options {
   opacity: 0;
   transition: 2s;
@@ -140,7 +150,7 @@ button:hover {
 .game-board {
   position: fixed;
   top: -700px;
-  transition: top 2s, opacity 1s;
+  transition: transform 2s, opacity 1s;
   width: 100%;
 }
 
@@ -164,6 +174,7 @@ canvas {
   left: 40px;
   margin-right: 5%;
   font-size: 24px;
+  text-align: right;
 }
 
 .scores > div {
@@ -173,49 +184,61 @@ canvas {
 .controls {
   position: absolute;
   right: 10px;
+  margin: 0;
+  padding: 0;
 }
 
-#drones {
+
+#drone {
   max-width: 200px;
   height: 100px;
 }
 
-#drones > img {
+#drone > img {
   float: left;
   height: 20px;
   width: 40px;
 }
 
 #deathtoll {
-  color: #d00;
+  color: #b00;
   font-weight: 700;
 }
 
 #shield {
-  color: seagreen;
+  color: rgba(50, 150, 125, 1);
   font-weight: 700;
 }
 
-.end-game, .new-game {
-  background-color: rgba(125, 150, 175, 0.7);
+#asteroid {
+  color: #ddd;
+}
+
+.menu {
+  background-color: rgba(125, 150, 175, 0.95);
   border: 3px solid #222;
   border-radius: 7px;
-  left: calc(50% - 335px);
-  margin: 10px;
-  position: fixed;
+  left: calc(50% - 328px);
+  margin: 0;
+  position: absolute;
   text-align: center;
+  transition: transform 1s ease-out;
   width: 650px;
 }
 
 .end-game {
   font-size: 24px;
-  top: -100%;
+  bottom: 100%;
+}
+
+.end-game > h2 {
+  margin: 10px auto;
 }
 
 .new-game {
   font-size: 18px;
-  bottom: -100%;
-  padding-bottom: 30px;
+  top: 100%;
+  padding-bottom: 20px;
   margin-bottom: -10px;
 }
 
@@ -230,6 +253,7 @@ canvas {
 }
 
 .new-game button {
+  background-color: #ccc;
   margin: 20px auto 10px;
   opacity: 1;
   width: 80%;
@@ -251,7 +275,7 @@ canvas {
 }
 
 .options > button:hover {
-  background-color: #fff;
+  background-color: #ccc;
   transition: background-color 0.5s;
 }
 
@@ -285,3 +309,55 @@ button > ul > li:nth-child(2) {
   text-align: left;
   width: 20%;
 }
+
+.instructions {
+  top: -160px;
+  width: 650px;
+  left: calc(50% - 325px);
+  position: absolute;
+  font-size: 18px;
+  transition: transform 1s ease-out;
+}
+
+.img-tabs {
+  padding-top: 40px;
+  margin-top: -40px;
+  width: 650px;
+}
+
+.img-tabs > h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 0 0 10px #fff;
+}
+
+.img-tabs img {
+  position: relative;
+  width: 100px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.instructions > div:not(.img-tabs) {
+  background-color: rgba(50, 150, 125, 0.95);
+  width: 100%;
+  position: absolute;
+  top: 180px;
+  display: none;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+/* .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #333;
+  margin: 2px;
+  padding: 0 2px;
+  background-color: rgba(200, 100, 100, 0.8);
+  border: 1px solid #333;
+  border-radius: 3px;
+} */
