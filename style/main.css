@@ -12,9 +12,11 @@ body {
 
 body * {
   -webkit-transition: top, bottom, opacity, background-color, box-shadow;
+  -moz-transition: top, bottom, opacity, background-color, box-shadow;
   -o-transition: top, bottom, opacity, background-color, box-shadow;
   transition: top, bottom, opacity, background-color, box-shadow;
   -webkit-transition-duration: 1s, 1s, 1.5s, .5s, .5s;
+  -moz-transition-duration: 1s, 1s, 1.5s, .5s, .5s;
   -o-transition-duration: 1s, 1s, 1.5s, .5s, .5s;
   transition-duration: 1s, 1s, 1.5s, .5s, .5s;
 }
@@ -29,6 +31,7 @@ body * {
   right: 0;
   top: -500px;
   -webkit-transition: opacity 2s, -webkit-transform 20s ease-out;
+  -moz-transition: opacity 2s, transform 20s ease-out;
   -o-transition: opacity 2s, transform 20s ease-out;
   transition: opacity 2s, transform 20s ease-out;
   z-index: -1;
@@ -42,6 +45,7 @@ a {
   text-decoration: none;
   color: #bbb;
   -webkit-transition: color 1s;
+  -moz-transition: color 1s;
   -o-transition: color 1s;
   transition: color 1s;
 }
@@ -69,6 +73,7 @@ header {
   top: 2000px;
   width: 100%;
   -webkit-transition: -webkit-transform 3s ease;
+  -moz-transition: transform 3s ease;
   -o-transition: transform 3s ease;
   transition: transform 3s ease;
 }
@@ -133,6 +138,7 @@ button {
   position: relative;
   width: 200px;
   -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
   -o-transition: background-color 1s;
   transition: background-color 1s;
 }
@@ -154,6 +160,9 @@ div.intro > p {
 
 .start-options {
   opacity: 0;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
   transition-duration: 2s;
 }
 
@@ -161,6 +170,7 @@ div.intro > p {
   position: fixed;
   top: -700px;
   -webkit-transition: -webkit-transform 2s, opacity 1s;
+  -moz-transition: transform 2s, opacity 1s;
   -o-transition: transform 2s, opacity 1s;
   transition: transform 2s, opacity 1s;
   width: 100%;
@@ -232,6 +242,7 @@ canvas {
   position: absolute;
   text-align: center;
   -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: transform 1s ease-out;
   -o-transition: transform 1s ease-out;
   transition: transform 1s ease-out;
   width: 650px;
@@ -289,6 +300,7 @@ canvas {
   background-color: #ccc;
   color: #333;
   -webkit-transition: background-color 0.5s, color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s;
   -o-transition: background-color 0.5s, color 0.5s;
   transition: background-color 0.5s, color 0.5s;
 }
@@ -331,6 +343,7 @@ button > ul > li:nth-child(2) {
   position: absolute;
   font-size: 18px;
   -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: transform 1s ease-out;
   -o-transition: transform 1s ease-out;
   transition: transform 1s ease-out;
 }
@@ -364,6 +377,7 @@ button > ul > li:nth-child(2) {
   display: none;
   opacity: 0;
   -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
   -o-transition: opacity .5s;
   transition: opacity .5s;
 }
