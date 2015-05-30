@@ -68,7 +68,7 @@ header {
   position: absolute;
   top: 2000px;
   width: 100%;
-  -webkit-transition: transform 3s ease;
+  -webkit-transition: -webkit-transform 3s ease;
   -o-transition: transform 3s ease;
   transition: transform 3s ease;
 }
@@ -160,7 +160,7 @@ div.intro > p {
 .game-board {
   position: fixed;
   top: -700px;
-  -webkit-transition: transform 2s, opacity 1s;
+  -webkit-transition: -webkit-transform 2s, opacity 1s;
   -o-transition: transform 2s, opacity 1s;
   transition: transform 2s, opacity 1s;
   width: 100%;
@@ -231,7 +231,7 @@ canvas {
   margin: 0;
   position: absolute;
   text-align: center;
-  -webkit-transition: transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
   -o-transition: transform 1s ease-out;
   transition: transform 1s ease-out;
   width: 650px;
@@ -330,7 +330,7 @@ button > ul > li:nth-child(2) {
   left: calc(50% - 325px);
   position: absolute;
   font-size: 18px;
-  -webkit-transition: transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
   -o-transition: transform 1s ease-out;
   transition: transform 1s ease-out;
 }
