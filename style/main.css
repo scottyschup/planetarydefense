@@ -70,7 +70,7 @@ a:hover {
 header {
   margin: 25px auto;
   position: absolute;
-  top: 2000px;
+  top: 1000px;
   width: 100%;
   -webkit-transition: -webkit-transform 3s ease;
   -moz-transition: transform 3s ease;
