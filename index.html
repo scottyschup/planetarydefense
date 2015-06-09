@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800'
-      rel='stylesheet'
-      type='text/css'>
-    <link rel="stylesheet" type="text/css" href="style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href=http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800
+      rel=stylesheet
+      type=text/css>
+    <link rel=stylesheet type=text/css href=style/normalize.css>
+    <link rel=stylesheet type=text/css href=style/main.css>
     <script src=jquery-2.1.1.min.js type=text/javascript></script>
 
     <title>Stargate: Planetary Defense</title>
@@ -33,34 +32,9 @@
     </footer>
 
     <section class=game-board>
-      <ul class="clearfix controls">
-        <li><b>Controls</b></li>
-        <li>
-          <div>&#8592;</div>
-          <div>rotate counter-clockwise</div>
-        </li>
-        <li>
-          <div>&#8594;</div>
-          <div>rotate clockwise</div>
-        </li>
-        <li>
-          <div>&#8593;</div>
-          <div>propel ship forward</div>
-        </li>
-        <li>
-          <div>&#8595;</div>
-          <div>propel ship backward</div>
-        </li>
-        <li>
-          <div>Space</div>
-          <div>fire drone</div>
-        </li>
-        <li>
-          <div>Shift</div>
-          <div>activate shield</div>
-        </li>
-      </ul>
-      <div class="clearfix scores">
+      <div class="clearfix info-panel scores">
+        <div><b>Score Board</b></div>
+        <hr>
         <div>
           <div>Earth Deathtoll</div>
           <div id=deathtoll></div>
@@ -74,10 +48,40 @@
           <div id=shield></div>
         </div>
         <div>
-          <div>Drones Left</div>
+          <div>Drones Remaining</div>
           <div id=drone></div>
         </div>
       </div>
+
+      <div class="clearfix info-panel controls">
+        <div><b>Controls</b></div>
+        <hr>
+        <div>
+          <div>&#8592;</div>
+          <div>rotate counter-clockwise</div>
+        </div>
+        <div>
+          <div>&#8594;</div>
+          <div>rotate clockwise</div>
+        </div>
+        <div>
+          <div>&#8593;</div>
+          <div>propel ship forward</div>
+        </div>
+        <div>
+          <div>&#8595;</div>
+          <div>propel ship backward</div>
+        </div>
+        <div>
+          <div>Space</div>
+          <div>fire drone</div>
+        </div>
+        <div>
+          <div>Shift</div>
+          <div>activate shield</div>
+        </div>
+      </div>
+
       <canvas id="game-canvas" width=700 height=500>
       </canvas>
     </section>
@@ -192,7 +196,7 @@
       $(function () {
         var canvas = $("#game-canvas")[0];
         var ctx = canvas.getContext("2d");
-        var gameView = new Asteroids.GameView(ctx);
+        var gameView = new SPD.GameView(ctx);
         gameView.intro();
       }());
     </script>
