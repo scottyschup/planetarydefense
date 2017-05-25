@@ -195,13 +195,13 @@ canvas {
 
 #drone {
   max-width: 200px;
+  float: right;
   height: 100px;
-  position: absolute;
   right: 0;
 }
 
 #drone > img {
-  float: left;
+  float: right;
   height: 20px;
   width: 40px;
 }
@@ -218,6 +218,13 @@ canvas {
 
 #asteroid {
   color: #ddd;
+}
+
+.source-link {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
 }
 
 .menu {
