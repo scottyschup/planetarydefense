@@ -16,3 +16,4 @@ I also gave moving objects the ability to collide and bounce off of each other. 
 - [ ] Add touch/gyro controls for smartphones/tablets
 - [ ] Make the screen size more dynamic (currently doesn't handle skinny or tall viewports very well
 - [ ] Leave smouldering impact points on the surface of Earth where each asteroid hits
+- [ ] Add background music and sound effects
