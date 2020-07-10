@@ -1,4 +1,4 @@
-# [Stargate: Planetary Defense](www.scottschupbach.com/planetarydefense)
+# [Stargate: Planetary Defense](www.scottschupbach.com/planetarydefense) [🔗](https://www.scottschupbach.com/planetarydefense)
 Only you can save Earth from total annihilation.
 
 ## Plot
